@@ -86,15 +86,62 @@ function remove3(str){
 }
 
 console.log(remove3(str))
-//Remove vowels from string
+
 //Missing numbers from an array
+
+let arr=[1,2,3,4,5,7]
+
+function missingNumber(arr){
+    let sum1=arr.reduce((acc,curr)=>acc+curr,0)
+    let sum2=0;
+    let i=0;
+    while(i<=arr.length+1){
+        sum2+=i;
+        i++
+     
+    }return sum2-sum1
+}
+console.log(missingNumber(arr))
+
+
 //Palindrome
+
 //Print 1 to 10 using setTimeout
+setTimeout(()=>{
+    for(let i=1;i<=10;i++){
+        console.log(i)
+    }
+},2000)
+
 //Count duplicate elements
 //Print 1 to 10 with 1 second gap 
+let count=1
+let interval= setInterval(()=>{
+    console.log(count);
+    count++
+    if(count>=10){
+        clearInterval(interval)
+    }
+},2000)
+
 //Largest element from an array
+function largest(arr){
+    return Math.max(...arr)
+}
 //Smallest element from an array
+
+function smallest(arr){
+    return Math.min(...arr)
+}
 //Reverse a string
+function reverse(str){
+    let string="";
+    for(let i=str.length-1;i>=0;i--){
+        string+=str[i]
+    }return string;
+}
+
+console.log(reverse("asyabi"))
 //Check if two strings are anagrams
 //Check if a number is prime
 //Factorial of a number
