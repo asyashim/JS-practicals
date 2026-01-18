@@ -143,9 +143,20 @@ function reverse(str){
 
 console.log(reverse("asyabi"))
 //Check if two strings are anagrams
+
+function anagram(str1,str2){
+    return str1.split("").sort().join("")===str2.split("").sort().join("")
+}
+console.log(anagram("silent","listen"))
 //Check if a number is prime
 //Factorial of a number
 //Sum and avg of elements from an array
+function sumandavg(arr){
+    let sum=arr.reduce((curr,acc)=>curr+acc,0)
+    return sum/arr.length
+}
+
+console.log(sumandavg([12,34,56,78]))
 //Count odd and even numbers
 //Swapping
 //Add only truthy values in an array
