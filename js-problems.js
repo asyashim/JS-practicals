@@ -158,13 +158,98 @@ function sumandavg(arr){
 
 console.log(sumandavg([12,34,56,78]))
 //Count odd and even numbers
+function countnum(arr){
+    let odd=0;
+    let even=0;
+    for(let ar of arr){
+        if(ar%2===0){
+            even+=1
+        }else{
+            odd+=1
+        }
+    }return [even,odd]
+}
+
+console.log(countnum([12,23,3,4,45,56,6]))
 //Swapping
+function swapping(arr){
+    for(let i=0;i<arr.length/2;i++){
+        let temp=arr[i];
+        arr[i]=arr[arr.length-1-i];
+        arr[arr.length-1-i]=temp;
+    }return arr
+}
+
+console.log(swapping([12,34,56,78]))
 //Add only truthy values in an array
+
+function truthy(arr){
+    let res=[];
+    for(let i=0;i<arr.length;i++){
+        if(arr[i]){
+            res[res.length]=arr[i]
+        }
+    }return res;
+}
+console.log(truthy([1,2,3,"hello",null,"",-1]))
 //generate odd numbers in between 1 and 10 in reverse order
+for(let i=9;i>=0;i-=2){
+    console.log(i)
+}
 //Add an element to an array without .push or .unshift
+function addElement(arr,val){
+    arr[arr.length]=val
+return arr;
+}
+console.log(addElement([12,45,67],89))
+
+function addElem(arr,value){
+    for(let i=arr.length;i>0;i--){
+        arr[i]=arr[i-1];
+        arr[0]=value
+    }return arr;
+}
+console.log(addElem([12,34,56],90))
 //Remove the last element of an array without .pop.
 
 //Reverse an array without using built-in methods.
+function reverse(arr){
+    let arr1=[]
+    for(let i=arr.length-1;i>=0;i--){
+      arr1[arr1.length] =arr[i] 
+    }return arr1;
+}
+console.log(reverse([12,34,56,78]))
 //Merge 2 arrays manually
+function merge(arr1,arr2){
+    let arr3=[];
+    for(let i=0;i<arr1.length;i++){
+        arr3[arr3.length]=arr1[i]
+    }
+        for(let j=0;j<arr2.length;j++){
+            arr3[arr3.length]=arr2[j]
+        
+    }return arr3
+}
+
+console.log(merge([12,34,56],[56,78,90]))
 //Find if a given element exists in an array (no .includes)
-//First occurance of the targe
+function find(arr,val){
+    let isExist=false
+    for(let i=0;i<arr.length;i++){
+        if(arr[i]===val){
+             isExist =true;
+        }
+    }return isExist
+}
+
+console.log(find([12,34,56],12))
+
+//First occurance of the target
+
+function occurence(arr,target){
+    return arr.indexOf(target)
+}
+console.log(occurence([12,34,56,12,67],12
+
+))
