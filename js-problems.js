@@ -106,6 +106,11 @@ console.log(missingNumber(arr))
 
 //Palindrome
 
+function palindrome(str){
+    return str===str.split("").reverse().join("")
+}
+console.log(palindrome("malayalam"))
+
 //Print 1 to 10 using setTimeout
 setTimeout(()=>{
     for(let i=1;i<=10;i++){
