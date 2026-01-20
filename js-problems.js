@@ -119,6 +119,14 @@ setTimeout(()=>{
 },2000)
 
 //Count duplicate elements
+function countDuplicates(arr){
+    let count=0;
+    let unique= new Set(arr)
+    count=arr.length-unique.size
+    return count;
+}
+
+console.log(countDuplicates([1,2,3,4,51,2,3,6]))
 //Print 1 to 10 with 1 second gap 
 let count=1
 let interval= setInterval(()=>{
@@ -155,6 +163,15 @@ function anagram(str1,str2){
 console.log(anagram("silent","listen"))
 //Check if a number is prime
 //Factorial of a number
+function factorial(num){
+    let res=1;
+    for(let i=1;i<=num;i++){
+        res*=i
+    }
+    return res
+}
+
+console.log(factorial(100))
 //Sum and avg of elements from an array
 function sumandavg(arr){
     let sum=arr.reduce((curr,acc)=>curr+acc,0)
