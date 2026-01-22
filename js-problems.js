@@ -233,6 +233,11 @@ function addElem(arr,value){
 }
 console.log(addElem([12,34,56],90))
 //Remove the last element of an array without .pop.
+function remove(arr){
+    arr.length=arr.length-1
+    return arr
+}
+console.log(remove([90,80,70,60,50]))
 
 //Reverse an array without using built-in methods.
 function reverse(arr){
