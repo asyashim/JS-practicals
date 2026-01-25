@@ -92,3 +92,24 @@ http.createServer((req,res)=>{
     const stream=fs.createReadStream('example.txt');
     stream.pipe(res)
 }).listen(3000)
+
+//Middlewatres
+//Basic middleware
+function logger(req,res,next){
+    console.log("Request received")
+    next()
+}
+
+const express=require ('express')
+//const app= express()
+app.use(logger)
+app.get("/basic",(req,res)=>{
+    res.send("Hello world")
+})
+//app.listen(3000)
+
+//Application-level middleware
+app.use((req, res, next) => {
+  console.log(req.method);
+  next();
+});
