@@ -280,3 +280,9 @@ function occurence(arr,target){
 console.log(occurence([12,34,56,12,67],12
 
 ))
+//Print 1 to 10 using while loop
+let i=1;
+while(i<=10){
+    console.log(i)
+    i++
+}
