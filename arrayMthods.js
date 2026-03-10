@@ -1,9 +1,13 @@
-//Double number using map
-let array=[12,34,56,78]
-let double= array.map(x=>x*2);
-console.log(double)
-
-//Find even numbers using filter
-let array=[12,23,34,45,56,78]
-let even=array.filter(x=>x%2===0);
-console.log(even)
+const http=require('http');
+const server=http.createServer((req,res)=>{
+    if(req.url==="/"){
+        res.end("Welcome to Home page")
+    }else if(req.url==="/about"){
+        res.end("Welcome from About page")
+    }else if(req.url==="/contact"){
+        res.end("Welcome from contact page...")
+    }else{
+        res.end("Page not found")
+    }
+})
+server.listen(3333)

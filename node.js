@@ -1,5 +1,5 @@
 //Create server using HTTP module
-const http =require('http')
+/*const http =require('http')
 const server= http.createServer((req,res)=>{
     res.writeHead(200,{"Content-Type":"text/plain"})
     res.write("Hello everyone");
@@ -64,7 +64,7 @@ try{
 
 }catch(err){
     console.log("Error: ",err)
-}*/
+}
 
 
 
@@ -112,4 +112,26 @@ app.get("/basic",(req,res)=>{
 app.use((req, res, next) => {
   console.log(req.method);
   next();
-});
+});*/
+
+const fs= require('fs')
+
+let arr=[12,34,56,78,79,97,45,23,67,89]
+const promise=new Promise((resolve,reject)=>{
+    let result=arr.some(num=>num%2===0)
+        if(result){
+            resolve("Even number found in the array")
+        }else{
+            reject("No even number found in the array")
+        }
+    
+})
+promise.then(message=>{
+    fs.writeFile("example.txt",message,(err)=>{
+        console.log('written...')
+        if (err) throw err
+    })
+})
+.catch(error=>{
+    console.log(error)
+})
